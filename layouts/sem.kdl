@@ -1,0 +1,29 @@
+layout {
+  default_tab_template {
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+    children
+    pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  pane_template name="nvim" {
+    command "nvim"
+  }
+
+  pane_template name="dev-server" {
+    command "zsh"
+    args "-c" "pnpm env use --global 14 && pnpm run dev"
+  }
+
+  tab focus=true name="Semancin" cwd="/Users/niza/Development/uniit/semancin/" {
+    nvim
+  }
+  
+  tab name="Semancin servers" split_direction="vertical" {
+    dev-server name="Backend" cwd="/Users/niza/Development/uniit/semancin/server/"
+    dev-server name="Frontend" cwd="/Users/niza/Development/uniit/semancin/client/" start_suspended=true
+  }
+}

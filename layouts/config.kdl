@@ -1,0 +1,27 @@
+layout {
+  default_tab_template {
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+    children
+    pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  pane_template name="nvim" {
+    command "nvim"
+  }
+
+  tab focus=true name="NVIM" cwd="/Users/niza/.config/nvim/" {
+    nvim
+  }
+  
+  tab name="Zellij" cwd="/Users/niza/.config/zellij/" {
+    nvim
+  }
+
+  tab name="Alacritty" cwd="/Users/niza/.config/alacritty/" {
+    nvim
+  }
+}

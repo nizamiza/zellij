@@ -1,0 +1,28 @@
+layout {
+  default_tab_template {
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+    children
+    pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  pane_template name="nvim" {
+    command "nvim"
+  }
+
+  tab focus=true name="TFAA backend" cwd="/Users/niza/Development/uniit/tfaa-backend/" {
+    nvim
+  }
+  
+  tab name="TFAA frontend" cwd="/Users/niza/Development/uniit/tfaa-frontend/" {
+    nvim
+  }
+
+  tab name="TFAA servers" split_direction="vertical" {
+    pane name="Backend" cwd="/Users/niza/Development/uniit/tfaa-backend"
+    pane name="Frontend" cwd="/Users/niza/Development/uniit/tfaa-frontend"
+  }
+}
