@@ -1,0 +1,36 @@
+layout {
+  default_tab_template {
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+    children
+    pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  pane_template name="nvim" {
+    command "nvim"
+  }
+
+  tab focus=true name="Zmudri frontend" cwd="/Users/niza/Development/uniit/zmudri-frontend/" {
+    nvim
+  }
+
+  tab name="Zmudri backend" cwd="/Users/niza/Development/uniit/zmudri-cms/" {
+    nvim
+  }
+
+  tab name="Zmudri migration" cwd="/Users/niza/Development/uniit/zmudri-to-strapi-migration/" {
+    nvim
+  }
+  
+  tab name="Zmudri servers" split_direction="vertical" {
+    pane name="Backend" cwd="/Users/niza/Development/uniit/zmudri-cms/"
+    pane name="Frontend" cwd="/Users/niza/Development/uniit/zmudri-frontend/"
+  }
+
+  tab name="Zmudri migration task" {
+    pane cwd="/Users/niza/Development/uniit/zmudri-to-strapi-migration/"
+  }
+}
