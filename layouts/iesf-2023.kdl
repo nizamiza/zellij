@@ -1,0 +1,24 @@
+layout {
+  default_tab_template {
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+    children
+    pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  pane_template name="nvim" {
+    command "nvim"
+  }
+
+  tab focus=true name="IeSF 2023" cwd="/Users/niza/Development/uniit/iesf-2023/" {
+    nvim
+  }
+  
+  tab name="IeSF servers" split_direction="vertical" {
+    pane name="Backend" cwd="/Users/niza/Development/uniit/iesf-2023/backend/"
+    pane name="Frontend" cwd="/Users/niza/Development/uniit/iesf-2023/frontend/"
+  }
+}
