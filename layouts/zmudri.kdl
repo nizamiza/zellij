@@ -21,16 +21,12 @@ layout {
     nvim
   }
 
-  tab name="Zmudri migration" cwd="/Users/niza/Development/uniit/zmudri-to-strapi-migration/" {
-    nvim
-  }
-  
   tab name="Zmudri servers" split_direction="vertical" {
     pane name="Backend" cwd="/Users/niza/Development/uniit/zmudri-cms/"
     pane name="Frontend" cwd="/Users/niza/Development/uniit/zmudri-frontend/"
   }
 
-  tab name="Zmudri migration task" {
-    pane cwd="/Users/niza/Development/uniit/zmudri-to-strapi-migration/"
+  tab name="Helper" {
+    pane cwd="/Users/niza/Development/uniit/"
   }
 }
