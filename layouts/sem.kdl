@@ -21,4 +21,6 @@ layout {
     pane name="Backend" cwd="/Users/niza/Development/uniit/semancin/server/"
     pane name="Frontend" cwd="/Users/niza/Development/uniit/semancin/client/"
   }
+
+  tab name="Helper" cwd="/Users/niza/Development/uniit/semancin/"
 }

@@ -21,4 +21,6 @@ layout {
     pane name="Backend" cwd="/Users/niza/Development/uniit/iesf-2023/backend/"
     pane name="Frontend" cwd="/Users/niza/Development/uniit/iesf-2023/frontend/"
   }
+
+  tab name="Helper" cwd="/Users/niza/Development/uniit/iesf-2023/"
 }
