@@ -1,0 +1,30 @@
+layout {
+  default_tab_template {
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+    children
+    pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  pane_template name="nvim" {
+    command "nvim"
+  }
+
+  tab focus=true name="UNIIT frontend" cwd="/Users/niza/Development/uniit/uniit-frontend/" {
+    nvim
+  }
+
+  tab name="UNIIT backend" cwd="/Users/niza/Development/uniit/uniit-backend/" {
+    nvim
+  }
+  
+  tab name="UNIIT servers" split_direction="vertical" {
+    pane name="Backend" cwd="/Users/niza/Development/uniit/uniit-backend/"
+    pane name="Frontend" cwd="/Users/niza/Development/uniit/uniit-frontend/"
+  }
+
+  tab name="Helper" cwd="/Users/niza/Development/uniit/uniit-backend/"
+}

@@ -31,4 +31,8 @@ layout {
   }
 
   tab name="Flutter" cwd="/Users/niza/Development/uniit/tower-finance-clients-app/"
+
+  tab name="Helper" {
+    pane cwd="/Users/niza/Development/uniit/"
+  }
 }

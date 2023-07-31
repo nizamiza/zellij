@@ -1,0 +1,30 @@
+layout {
+  default_tab_template {
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+    children
+    pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  pane_template name="nvim" {
+    command "nvim"
+  }
+
+  tab focus=true name="Y-GAMES frontend" cwd="/Users/niza/Development/uniit/ygames-company-frontend/" {
+    nvim
+  }
+
+  tab name="Y-GAMES backend" cwd="/Users/niza/Development/uniit/ygames-company-backend/" {
+    nvim
+  }
+  
+  tab name="Y-GAMES servers" split_direction="vertical" {
+    pane name="Backend" cwd="/Users/niza/Development/uniit/ygames-company-backend/"
+    pane name="Frontend" cwd="/Users/niza/Development/uniit/ygames-company-frontend/"
+  }
+
+  tab name="Helper" cwd="/Users/niza/Development/uniit/ygames-company-backend/"
+}

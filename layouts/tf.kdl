@@ -25,4 +25,8 @@ layout {
     pane name="Backend" cwd="/Users/niza/Development/uniit/tfaa-backend"
     pane name="Frontend" cwd="/Users/niza/Development/uniit/tfaa-frontend"
   }
+
+  tab name="Helper" {
+    pane cwd="/Users/niza/Development/uniit/"
+  }
 }

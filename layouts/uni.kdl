@@ -25,4 +25,8 @@ layout {
     pane name="Backend" cwd="/Users/niza/Development/uniit/unispace-backend"
     pane name="Frontend" cwd="/Users/niza/Development/uniit/unispace-frontend"
   }
+
+  tab name="Helper" {
+    pane cwd="/Users/niza/Development/uniit/"
+  }
 }
